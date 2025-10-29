@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium.com | Replica | Made by Christian Ang</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        navbar {
+            display: flex;
+            /* border: 3px solid black; */
+            margin-left: 24px;
+            margin-right: 24px;
+            /* justify-content: space-between; */
+            align-items: center;
+            height: 57px;
+            
+        }
+
+        .nav-left-side {
+            display: flex;
+            align-content: center;
+            gap: 18px;
+            flex-grow: 1;
+        }
+
+        .nav-left-side input {
+            background-color: #f9f9f9;
+            border-radius: 15px;
+            border: none;
+            padding: 10px 20px 10px 10px;
+        }
+
+        .nav-left-side img {
+            width: 112px;
+        }
+
+        .nav-right-side {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .nav-right-side a{
+            color: #6B6B6B;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .n-r-s-w {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Article Author */
+
+        article {
+            display: flex;
+            flex-direction: column;
+            /* border: 3px solid red; */
+            width: 680px;
+            margin: auto;
+        }
+
+
+        .article-title {
+            margin-top: 50px;
+            margin-bottom: 32px;
+            font-weight: 800;
+            font-size: 42px;
+        }
+
+        .article-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+        }
+
+        .a-a-left-side {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .a-a-left-side img {
+            width: 2rem;
+            border-radius: 20px;
+        }
+
+        .a-a-left-side a {
+            color: black;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .follow-button {
+            border: 1px solid black;
+            padding: 6px 12px 6px 12px;
+            border-radius: 15px;
+        }
+
+        .a-a-right-side p {
+            font-size: 14px;
+            color: #6B6B6B;
+        }
+
+        /* Interactions Container */
+
+        .interactions-container {
+            display: flex;
+            margin-top: 32px;
+            padding: 3px 8px 3px 8px;
+            border-top: 1px solid #F2F2F2;
+            justify-content: space-between;
+            border-bottom: 1px solid #F2F2F2;
+        }
+
+        .i-c-left-side {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .i-c-left-side p {
+            font-size: 13px;
+            color: #6B6B6B;
+        }
+
+        .i-c-right-side {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Main Article */
+
+        .main-article {
+            display: flex;
+            margin-top: 2rem;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .main-article img {
+            width: 100%;
+            aspect-ratio: auto 700 / 401;
+        }
+
+        .article-content {
+            margin-top: 43px;
+            font-size: 20px;
+            color: #242424;
+            line-height: 2rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        @media (max-width: 620px) {
+            navbar {
+                flex-direction: column;  
+                padding-top: 10px;
+                gap: 10px;
+                margin-bottom: 50px;
+            }
+
+            .nav-left-side {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            article {
+                width: 85%;
+            }
+
+            .article-title {
+                font-size: 35px;
+            }
+
+            .article-author {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <navbar>
+        <div class="nav-left-side">
+            <img src="img/svg-image-2.svg">
+            <input type="text" placeholder="Search">
+            <img src="img/svg-image-3.svg" style="width: 25px;">
+        </div>
+        <div class="nav-right-side">
+            <div class="n-r-s-w">
+                <img src="img/svg-image-4.svg">
+                <a href="#">Write</a>
+            </div>
+            <a href="#" style="background-color: #1A8917; padding: 5px 12px 5px 12px; border-radius: 15px; color: white;">Sign up</a>
+            <a href="#">Sign in</a>
+        </div>
+    </navbar>
+
+    <article>
+
+        <div class="article-header">
+            <h1 class="article-title">Medium.com Static HTML & CSS replica</h1>
+            <!-- Article Author  -->
+            <div class="article-author">
+                <div class="a-a-left-side">
+                    <a href="contact.html"><img src="img/icon-ni-gago.png"></a>
+                    <a href="contact.html" class="author-name">Christian Ang</a>
+                    <a href="contact.html" class="follow-button">Follow</a>
+                </div>
+                <div class="a-a-right-side">
+                    <p class="article-category">5 minute read &#8226; October 25, 2025</p>
+                </div>
+            </div>
+
+            <!-- Interactions container -->
+            <div class="interactions-container">
+
+                <div class="i-c-left-side">
+                    <img src="img/svg-image-6.svg">
+                    <p>6.3M</p>
+                    <img src="img/svg-image-7.svg">
+                    <p>13M</p>
+                </div>
+                <div class="i-c-right-side">
+                    <img src="img/svg-image-8.svg">
+                    <img src="img/svg-image-9.svg">
+                    <img src="img/svg-image-10.svg">
+                </div>
+            </div>            
+        </div>
+
+        <!-- Main Content -->
+
+        <div class="main-article">
+
+            <img src="img/article-image-1.webp">
+
+            <p style="font-size: 14px;">13 Going on 30 | © Columbia Pictures</p>
+
+            <p class="article-content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit beatae facere culpa reprehenderit aut quaerat ab, laudantium minus ducimus nesciunt dolorem laboriosam! Doloremque quibusdam est corrupti cum, error culpa. Tempore tenetur mollitia officia excepturi eveniet error labore autem inventore deleniti facilis ea repudiandae ut voluptate quod itaque tempora consequatur illum culpa iure, recusandae nihil atque pariatur dolorum. Expedita excepturi, minus eius ex alias at accusamus ullam dicta repudiandae hic ab eveniet sint, animi sed modi rerum tempora veniam quis a!
+                <br><br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam optio corrupti aspernatur delectus dolores fuga omnis, obcaecati molestias voluptates rerum eos quas nobis voluptate vitae non. Doloremque ea excepturi necessitatibus sapiente deserunt provident adipisci rerum voluptatem, asperiores neque nam repellat explicabo ipsum consectetur eaque aut corrupti consequuntur nesciunt amet a! Natus laboriosam error ratione vitae nam nostrum! Ab, repellat nihil.
+                <br><br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim eveniet hic ut dolore sed minus libero maiores tempore! Soluta temporibus debitis quasi aliquam velit iusto natus quibusdam perferendis. Explicabo fuga, nulla similique odio sunt veritatis at reiciendis quaerat, a cumque, enim praesentium quod natus voluptates mollitia aperiam beatae dolorum obcaecati accusantium eaque ipsa vitae laboriosam minus. Dolorum saepe, cupiditate quidem reprehenderit quos molestias, quibusdam quod inventore iure explicabo, nostrum adipisci natus atque dolores iste reiciendis ut magni dicta fugit aliquam.
+            </p>
+
+        </div>
+
+
+
+
+    </article>
+    
+</body>
+</html>

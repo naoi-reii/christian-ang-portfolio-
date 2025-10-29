@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Ang | Web Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" type="image/x-icon" href="/images/site-logo.svg">
+
+    <style>
+        :root {
+            --color-white: #fff;
+            --color-grey: #525252;
+            --color-black: #000;
+            --color-dark-white: #F5F5F5;
+            --color-dark-red: #950606; 
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* background-color: var(--color-dark-white); */
+        }
+        main {
+            display: flex;
+            flex-direction: column;
+            /* border: 3px solid red; */
+            width: 70%;
+            margin: 0 auto;
+            padding: 1.5rem;
+            gap: 1.5rem;
+        }
+
+        .main-header {
+            /* border: 3px solid blue; */
+            background-color: var(--color-white);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            border-radius: 15px;
+            box-shadow: 2px 0px 26px -1px rgba(0,0,0,0.10);
+            transition: box-shadow .2s ease-in-out ;
+        }
+
+        .main-header:hover {
+            box-shadow: 2px 0px 26px -1px rgba(0,0,0,0.30);
+
+        }
+
+        .main-header img {
+            width: 70px;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+
+        }
+
+        .main-header img:hover {
+            transform: rotate(180deg);
+        }
+
+        .about-me {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            /* border: 3px solid green; */
+            background-color: var(--color-white);
+            padding: 1rem;
+            border-radius: 15px;
+            box-shadow: 2px 0px 26px -1px rgba(0,0,0,0.10);
+
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            /* border: 3px solid yellow; */
+            
+            background-color: var(--color-white);
+            padding: 1rem;
+            border-radius: 15px;
+            box-shadow: 2px 0px 26px -1px rgba(0,0,0,0.10);
+
+        }
+
+        .stack-icons-container {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .stack-icons-container img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .stack-icons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5em;
+            flex-wrap: wrap;
+            flex: 1;
+        }
+
+        .stack-icons p {
+            font-size: 14px;
+        }
+
+        .projects {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            /* border: 3px solid red; */
+            background-color: var(--color-white);
+            border-radius: 15px;
+            padding: 1rem;
+            box-shadow: 2px 0px 26px -1px rgba(0,0,0,0.10);
+
+        }
+
+        .projects-card-container-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-auto-flow: column;
+            grid-auto-columns: minmax(300px, 1fr);
+            overflow-x: auto;
+            /* border: 3px solid blue; */
+            padding-bottom: 1rem;
+            gap: 1rem;
+        }
+
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* border: 3px solid var(--color-black); */
+            gap: 5px;
+        }
+
+        .project-card img {
+            width: 90%;
+            aspect-ratio: 16/9;
+            border-bottom: 1px solid #ddd;
+            border-top: 1px solid #ddd;
+            object-fit: contain;
+        }
+
+        .project-card a {
+            font-size: 14px;
+            text-decoration: none;
+            color: black;
+
+        }
+
+        .contact {
+            /* border: 3px solid red; */
+            padding: 1rem;
+            border-radius: 15px;
+            background-color: var(--color-white);
+            box-shadow: 2px 0px 26px -1px rgba(0,0,0,0.10);
+
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            gap: 1em;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            border-radius: 15px;
+            border: 1px solid #ddd;
+            font-family: 'Poppins';
+        }
+
+
+
+        @media (max-width: 700px) {
+            main {
+                width: 85%;
+            }
+        }
+
+        
+
+    </style>
+</head>
+<body>
+
+    <main>
+        <!-- Main Header (profile picture, name, role) -->
+        <div class="main-header" id="headerTop">
+            <img src="images/icon-ni-gago.png">
+            <div class="main-header-name">
+                <p style="font-size: 18px; font-weight: 700;">Christian Ang</p>
+                <p style="font-size: 14px; color: var(--color-grey);">Frontend Web Designer & Developer</p>
+                <a href="mailto:angchristian95@gmail.com" target="_blank" style="font-size: 14px; color: var(--color-grey); ">angchristian95@gmail.com</a>
+            </div>
+        </div>
+        <!-- end of main header -->
+
+        <!-- About me -->
+        <div class="about-me">
+            <p style="font-weight: 700;">About me</p>
+            <p style="font-size: 14px;">Hi! I’m Christian Ang, 3rd Year BSIT student and a passionate Web Designer and developer who loves turning ideas into clean, modern, and user-friendly websites. I enjoy combining creative design with functional code, crafting experiences that not only look great but also perform seamlessly across all devices.</p>
+            <div class="education-background">
+                <p style="font-weight: 700; margin-bottom: 10px;">Education</p>
+                <p style="font-size: 14px;">St. Vincent De Paul Academy | 2010-2023</p>
+                <p style="font-size: 14px;">Our Lady of Fatima University | <i>Bachelor of Science in Information Technology</i> | 2023-present</p>
+
+
+            </div>
+        </div>
+        <!-- end of about me -->
+
+        <!-- Tech stack -->
+        <div class="tech-stack">
+            <p style="font-weight: 700;">Tech Stack <span style="font-size: 14px; font-weight: 500; color: var(--color-grey);"><i>% = proficiency</i></span></p>
+            <div class="stack-icons-container">
+                <div class="stack-icons">
+                    <img src="images/html.png">
+                    <p>HTML</p>
+                    <p style="font-size: 13px; background-color: var(--color-black); color: white; border-radius: 5px; padding: 5px;">100%</p>
+                </div>
+                <div class="stack-icons">
+                    <img src="images/css.png">
+                    <p>CSS</p>
+                    <p style="font-size: 13px; background-color: var(--color-black); color: white; border-radius: 5px; padding: 5px;">100%</p>
+
+                </div>
+                <div class="stack-icons">
+                    <img src="images/figma.png">
+                    <p>Figma</p>
+                    <p style="font-size: 13px; background-color: var(--color-black); color: white; border-radius: 5px; padding: 5px; width: 32px; text-align: center;">95%</p>
+
+                </div>
+                <div class="stack-icons">
+                    <img src="images/wordpress.png">
+                    <p>WordPress</p>
+                    <p style="font-size: 13px; background-color: var(--color-black); color: white; border-radius: 5px; padding: 5px; width: 32px; text-align: center;">80%</p>
+
+                </div>
+                <div class="stack-icons">
+                    <img src="images/js.png">
+                    <p>JavaScript</p>
+                    <p style="font-size: 13px; background-color: var(--color-black); color: white; border-radius: 5px; padding: 5px; width: 32px; text-align: center;">60%</p>
+
+                </div>
+                <div class="stack-icons">
+                    <img src="images/tailwend.png">
+                    <p>Tailwind</p>
+                    <p style="font-size: 13px; background-color: var(--color-black); color: white; border-radius: 5px; padding: 5px; width: 32px; text-align: center;">90%</p>
+
+                </div>
+                <div class="stack-icons">
+                    <img src="images/git.png">
+                    <p>Git</p>
+                    <p style="font-size: 13px; background-color: var(--color-black); color: white; border-radius: 5px; padding: 5px;">100%</p>
+
+                </div>
+                <div class="stack-icons">
+                    <img src="images/github.png">
+                    <p>GitHub</p>
+                    <p style="font-size: 13px; background-color: var(--color-black); color: white; border-radius: 5px; padding: 5px;">100%</p>
+
+                </div>
+            </div>
+        </div>
+        <!-- end of tech stack -->
+
+        <!-- Projects -->
+
+        <div class="projects">
+            <p style="font-weight: 700;">Web Projects</p>
+            <div class="projects-card-container-grid">
+
+                <div class="project-card">
+                    <img src="images/jg-photography-web-app.png">
+                    <a href="images/jg-photography-web-app.png" target="_blank">Photography Booking Website<i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+
+
+                <div class="project-card">
+                    <img src="images/dff-kilpro-site.png">
+                    <a href="images/dff-kilpro-site.png" target="_blank">PestControl Services Website<i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+
+                <div class="project-card">
+                    <img src="images/yt-music-replica.png">
+                    <a href="youtube-music-clone.html" target="_blank">YouTube Music Replica<i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+
+                <div class="project-card">
+                    <img src="images/yt-replic.png">
+                    <a href="images/yt-replica.png" target="_blank">YouTube Replica<i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+
+
+                <div class="project-card">
+                    <img src="images/gpt-replica.png">
+                    <a href="images/gpt-replica.png" target="_blank">ChatGPT Replica<i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+
+
+                <div class="project-card">
+                    <img src="images/medium-replica-img.png">
+                    <a href="medium-com-clone.html" target="_blank">Medium Replica<i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        
+        <div class="projects">
+            <p style="font-weight: 700;">Mockup Projects</p>
+            <div class="projects-card-container-grid">
+
+                <div class="project-card">
+                    <img src="images/coffpic.png">
+                    <a href="images/coffpick.png">Coffee Shop Design<i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="contact">
+            <p style="font-weight: 700;">Request a Demo <span style="color: var(--color-dark-red); font-size: 16px;"><i>100% free</i></span></p>
+            <form action="#" method="post" class="contact-form">
+
+                <input name="name" placeholder="Name:" type="text">
+                <input name="email" placeholder="Email:" type="email">
+                <input name="projectType" placeholder="Type of Website:" type="text">
+
+                <textarea name="message" placeholder="Your Message:"></textarea>
+                <input type="submit" style="background-color: var(--color-black); color: var(--color-white);">
+            </form>
+        </div>
+
+
+
+
+        <a href="#headerTop" style="font-size: 14px; color: var(--color-black); text-align: center;">Back to top</a>
+
+
+    </main>
+
+    
+</body>
+</html>
