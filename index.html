@@ -31,7 +31,7 @@
 
         body {
             font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            /* background-color: var(--color-dark-white); */
+            /* background-color: var(--color-white); */
         }
         main {
             display: flex;
@@ -52,12 +52,6 @@
             padding: 1rem;
             border-radius: 15px;
             box-shadow: 2px 0px 26px -1px rgba(0,0,0,0.10);
-            transition: box-shadow .2s ease-in-out ;
-        }
-
-        .main-header:hover {
-            box-shadow: 2px 0px 26px -1px rgba(0,0,0,0.30);
-
         }
 
         .main-header img {
@@ -225,13 +219,14 @@
 <body>
 
     <main>
+
         <!-- Main Header (profile picture, name, role) -->
         <div class="main-header" id="headerTop">
             <img src="images/icon-ni-gago.png">
             <div class="main-header-name">
                 <p style="font-size: 18px; font-weight: 700;">Christian Ang<i class="fa-solid fa-circle" style="color: darkgreen; font-size: 13px; margin-left: 5px;"></i><span style="font-size: 13px; font-weight: 600;">Available</span></p>
                 <p style="font-size: 14px; color: var(--color-grey);">Frontend Web Designer & Developer</p>
-                <a href="mailto:angchristian95@gmail.com" target="_blank" style="font-size: 14px; color: var(--color-grey); ">angchristian95@gmail.com</a>
+                <a href="mailto:angchristian95@gmail.com" target="_blank" style="font-size: 14px; color: var(--color-grey); text-decoration: none;"><i class="fa-solid fa-envelope"></i> angchristian95@gmail.com</a>
             </div>
         </div>
         <!-- end of main header -->
@@ -243,7 +238,7 @@
             <div class="education-background">
                 <p style="font-weight: 700; margin-bottom: 10px;">Education</p>
                 <p style="font-size: 14px;"><b>St. Vincent De Paul Academy</b> | 2010-2023</p>
-                <p style="font-size: 14px;"><b>Our Lady of Fatima University</b> | BSIT | 2023-present</p>
+                <p style="font-size: 14px;"><b>Our Lady of Fatima University</b> | B.S IT | 2023-present</p>
 
 
             </div>
@@ -252,7 +247,7 @@
 
         <!-- Tech stack -->
         <div class="tech-stack">
-            <p style="font-weight: 700;">Tech Stack <span style="font-size: 14px; font-weight: 500; color: var(--color-grey);"><i>% = proficiency</i></span></p>
+            <p style="font-weight: 700;">Tech Stack <span style="font-size: 13px; font-weight: 500; color: var(--color-grey);"><i>% = proficiency</i></span></p>
             <div class="stack-icons-container">
                 <div class="stack-icons">
                     <img src="images/html.png">
