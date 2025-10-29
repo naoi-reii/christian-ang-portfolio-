@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <title>Coffpick.co</title>
+    <style>
+        :root {
+            --brown-1: #D98324;
+        }
+        * {
+            font-family: 'Poppins', Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            margin: auto;
+            padding: 1rem 0;
+        }
+
+        .logo-left {
+            color: var(--brown-1);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        nav ul li {
+            list-style-type: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--brown-1);
+            font-weight: 500;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+
+        /* Hero-section design */
+
+        .hero-section {
+            display: flex;
+            /* border: 3px solid red;   */
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 2rem;
+            width: 90%;
+            margin: auto;
+        }
+
+        /* .hero-left-image {
+            border: 3px solid forestgreen;
+        } */
+
+        .hero-left-image img {
+            width: 450px;
+        }
+
+        .hero-right-header {
+           /* border: 3px solid blue; */
+           width: 350px;
+        }
+
+        .hero-right-header h1 {
+            font-size: 3em;
+            line-height: 50px;
+            color: var(--brown-1);
+        }
+
+        .menu-section {
+            /* border: 3px solid red; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+            width: 90%;
+        }
+    
+
+        .menu-section h1 {
+            color: var(--brown-1);
+        }
+
+        .menu-card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            /* border: 3px solid blue; */
+            width: 70%;
+            grid-auto-flow: column;
+            grid-auto-columns: minmax(240px, 1fr);
+            overflow-x: scroll;
+        }
+
+        .menu-card-container::-webkit-scrollbar {
+            width: 2px;
+            height: 10px;
+        }
+
+        .menu-card-container::-webkit-scrollbar-track {
+            background-color: #f4f4f4;
+        }
+
+        .menu-card-container::-webkit-scrollbar-thumb {
+            background-color: #ddd;
+            border-radius: 15px;
+            cursor: pointer;
+
+        }
+
+        .menu-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--brown-1);
+            border-radius: 8px;
+            gap: 10px;
+            padding-bottom: 15px;
+        }
+
+        .menu-card p {
+            color: white;
+        }
+
+        .menu-card img {
+            width: 120px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .menu-card-c {
+            border-top: 3px solid white;
+            width: 70%;
+            text-align: center;
+        }
+
+        @media (max-width: 1000px) {
+            .menu-card-container {
+                width: 80%;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .hero-section {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+        }
+
+        @media (max-width: 450px) {
+
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-left-image img {
+                width: 300px;
+            }
+
+            .hero-right-header {
+                width: 250px;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <p class="logo-left">Coffpick.co</p>
+        <ul>
+            <li><a href="coffpick-mockup.html">home</a></li>
+            <li><a href="#menu">menu</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="hero-section">
+            <div class="hero-right-header">
+                <h1>Freshly Brewed, & Freshly Made</h1>
+            </div>
+            <div class="hero-left-image">
+                <img src="img/hero-image.png">
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h1 id="menu">Our Products</h1>
+            <div class="menu-card-container">
+                <div class="menu-card">
+                    <img src="img/—Pngtree—iced coffee cappuccino cup_15683400.png">
+                    <p>Iced Coffee Cappuccino</p>
+
+                    <p class="menu-card-c">Iced</p>
+
+                </div>
+                  <div class="menu-card">
+                    <img src="img/m-2.png">
+                    <p>Iced Matcha Latte</p>
+                    
+                    <p class="menu-card-c">Iced</p>
+
+                </div>
+                <div class="menu-card">
+                    <img src="img/—Pngtree—purple drink in a plastic_15781244.png">
+                    <p>Iced Ube Coffee</p>
+
+                    <p class="menu-card-c">Iced</p>
+                </div>
+
+                                <div class="menu-card">
+                    <img src="img/—Pngtree—purple drink in a plastic_15781244.png">
+                    <p>Iced Ube Coffee</p>
+
+                    <p class="menu-card-c">Iced</p>
+                </div>
+
+                                <div class="menu-card">
+                    <img src="img/—Pngtree—purple drink in a plastic_15781244.png">
+                    <p>Iced Ube Coffee</p>
+
+                    <p class="menu-card-c">Iced</p>
+                </div>
+
+                                <div class="menu-card">
+                    <img src="img/—Pngtree—purple drink in a plastic_15781244.png">
+                    <p>Iced Ube Coffee</p>
+
+                    <p class="menu-card-c">Iced</p>
+                </div>
+
+                                <div class="menu-card">
+                    <img src="img/—Pngtree—purple drink in a plastic_15781244.png">
+                    <p>Iced Ube Coffee</p>
+
+                    <p class="menu-card-c">Iced</p>
+                </div>
+
+                                <div class="menu-card">
+                    <img src="img/—Pngtree—purple drink in a plastic_15781244.png">
+                    <p>Iced Ube Coffee</p>
+
+                    <p class="menu-card-c">Iced</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
