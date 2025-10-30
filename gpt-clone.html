@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Clone</title>
+
+    <link rel="icon" type="images" href="svg/svg-image-1.svg">
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        main {
+            display: flex;
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            width: 260px;
+            height: 100vh;
+            overflow-y: scroll;
+            background-color: #f9f9f9;
+        }
+
+        .sidebar-header {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background-color: #f9f9f9;
+            padding: 6px;
+        }
+
+        .sidebar-menus {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 0;
+            margin: 16px;
+        }
+
+        .sidebar-menus li {
+            list-style-type: none;
+        }
+
+        .sidebar-menus li a {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .sidebar-footer {
+            padding: 10px;
+            display: flex;
+            /* border: 3px solid red; */
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 1000;
+            width: 225px;
+            background-color: white;
+        }
+        /* 
+        .sidebar-footer > * {
+            flex: 1;
+
+        } */
+
+        .user-profile {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-direction: row;
+            /* border: 3px solid blue; */
+            gap: 10px;
+        }
+
+        .user-profile img {
+            width: 20%;
+            border-radius: 20px;
+        }
+
+        /* .username-and-plan {
+            border: 3px solid green;
+        } */
+
+        .username-and-plan p {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .upgrade-button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* border: 3px solid orange; */
+        }
+
+        .upgrade-button a {
+            text-decoration: none;
+            color: black;
+            background-color: white;
+            border: 1px solid rgba(128, 128, 128, 0.24);
+            font-size: 12px;
+            width: 45px;
+            padding: 6px;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        .chats-history {
+            margin: 16px;
+        }
+
+        .chats-history-container {
+            padding: 0;
+            margin-top: 6px;
+
+        }
+
+        .chats-history-container li {
+            list-style-type: none;
+            padding-bottom: 6px;
+        }
+
+        .chats-history-container a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            /* border: 3px solid red; */
+            flex: 1;
+        }
+
+        .main-content-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            padding: 16px;
+            /* border: 3px solid blue; */
+            flex: 1;
+        }
+
+        .ai-name {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+        }
+
+        .ai-upgrade {
+            display: flex;
+            justify-content: center;
+            background-color: #f1f1fb;
+            border-radius: 20px;
+            text-decoration: none;
+            padding: 8px 0 8px 0;
+            font-size: 14px;
+            width: 130px;
+            font-weight: 600;
+        }
+
+        .main-content-chat {
+            display: flex;
+            /* border: 3px solid red; */
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+        }
+
+        .main-content-chat h2 {
+            font-weight: 400;
+            font-size: 28px;
+        }
+
+        .main-content-chat input {
+            padding: 20px;
+            border-radius: 30px;
+            border: 2px solid rgba(13, 13, 13, 0.119);
+            box-shadow: outset 0 0 2px 0 rgba(13, 13, 13, 0.116); 
+            width: 60%;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+
+        <div class="sidebar">
+            
+            <div class="sidebar-header">
+                <img src="svg/svg-image-1.svg">
+                <img src="svg/svg-image-2.svg">
+            </div>
+
+            <ul class="sidebar-menus">
+                <li><a href=""><img src="svg/svg-image-3.svg">New chat</a></li>
+                <li><a href=""><img src="svg/svg-image-4.svg">Search chats</a></li>
+                <li><a href=""><img src="svg/svg-image-12.svg">Library</a></li>
+                <li><a href=""><img src="svg/svg-image-13.svg">Projects</a></li>
+            </ul>
+
+            <div class="chats-history">
+                <p style="color: #8f8f8f; margin: 0;">Chats</p>
+
+                <ul class="chats-history-container">
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet.</a></li>
+
+
+                </ul>
+            </div>
+
+            <div class="sidebar-footer">
+
+                <div class="user-profile">
+                <img src="https://lh3.googleusercontent.com/a/ACg8ocIQWrcSAy081tU2zPnTo_FW1_LfEtMjD2uk4Va9FIspjJYLFH0Y=s360-c-no">
+
+                    <div class="username-and-plan">
+                    <p>Christian Ang</p>
+                    <p style="font-weight: 400; color: #8f8f8f;">Frontend Dev</p>
+
+                </div>
+                </div>    
+                
+                <div class="upgrade-button"><a href="#">Hire me</a></div>
+            </div>
+
+        </div>
+
+
+        <div class="main-content">
+        
+            <div class="main-content-header">
+                <a href="#" class="ai-name">ChatGPT<img src="svg/svg-image-14.svg"></a>
+
+                <a href="#" class="ai-upgrade"><img src="svg/svg-image-17.svg">Upgrade to Go</a>
+                                
+                <a href="#"><img src="svg/svg-image-20.svg"></a>
+
+            </div>
+
+            <div class="main-content-chat">
+
+                <h2>Whats on your mind today?</h2>
+
+                <input type="text" placeholder="Ask Anything">
+
+            </div>
+
+            
+            <div class="main-content-chat">
+
+
+
+            </div>
+
+            <div class="main-content-chat">
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+    </main>
+    
+</body>
+</html>
